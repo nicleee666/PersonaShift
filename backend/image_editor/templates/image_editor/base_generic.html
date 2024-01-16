@@ -1,0 +1,36 @@
+<!-- image_editor/templates/image_editor/base_generic.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Image Editor{% endblock title %}</title>
+    {% block extrahead %}{% endblock extrahead %}
+    <!-- Add your stylesheet links here -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Navigation bar, logo, etc. -->
+        <nav>
+            <!-- Navigation links -->
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- The content block will be overridden by child templates -->
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    {% block extrajs %}
+    <!-- Any extra JavaScript files you want to include -->
+    {% endblock extrajs %}
+</body>
+</html>
